@@ -1,0 +1,4 @@
+plugins:
+  discourse_current_category_enabled:
+    default: false
+    client: false
