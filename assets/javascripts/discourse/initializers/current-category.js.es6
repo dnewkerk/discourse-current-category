@@ -9,10 +9,10 @@ export default {
     const router = container.lookup("router:main");
     router.on("routeDidChange", this, () => {
       // Listings
-      if (router.currentRoute.attributes.category) {
+      if (router.currentRoute.attributes && router.currentRoute.attributes.category) {
         categoryId = router.currentRoute.attributes.category.id;
       // Topics
-      } else if (router.currentRoute.parent.attributes) {
+      } else if (router.currentRoute.parent && router.currentRoute.parent.attributes) {
         categoryId = router.currentRoute.parent.attributes.category_id;
       } else {
         categoryId = null;
